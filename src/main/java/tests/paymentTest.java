@@ -14,7 +14,7 @@ public class paymentTest extends TestBase{
 //	}
 	
 	@Test(priority=1)//dataProvider = "SignUpData"
-	public void signUp() throws Exception {
+	public void createPaymentLink() throws Exception {
 		//Navigate to Sign Up Page
 		Thread.sleep(5000);
 		loginPage actn = new loginPage(driver);
@@ -42,14 +42,4 @@ public class paymentTest extends TestBase{
 		act.clickSubmit();
 		Thread.sleep(10000);
 	}
-	
-//	@DataProvider(name = "SignUpData")
-//    public Object[][] testData() throws Exception
-//    {
-//        return new Object[][]
-//                {
-//        				{"firstName", "lastName", "emailaddress", "businessName", "country", "phoneNum", "password","password"},
-//        				
-//                };
-//    }
 }

@@ -21,6 +21,18 @@ public class paymentLinkPage extends TestBase{
 	
 	String submitBtn = OR.getProperty("submitBtn");
 	
+	String displayTestCardsBtn = OR.getProperty("displayTestCardsBtn");
+	
+	String selectCard = OR.getProperty("cardSelection");
+	
+	String payButton = OR.getProperty("payButton");
+	
+	String submitAuth = OR.getProperty("submitButton");
+	
+	
+	
+	//cardSelection
+	
 	public void PaymentLinkPage(WebDriver driver) {
         TestBase.driver = driver;
         PageFactory.initElements(TestBase.driver, this);
@@ -69,6 +81,28 @@ public class paymentLinkPage extends TestBase{
 	 public void clickSubmit() throws Exception {
 	    	driver.findElement(By.xpath(submitBtn)).click();
 	    }
+	 
+	 public void clickDisplayTestCard() throws Exception {
+	    	driver.findElement(By.xpath(displayTestCardsBtn)).click();
+	    }
+	 
+	 public void selectTestCard() throws Exception {
+	    	driver.findElement(By.xpath(selectCard)).click();
+	    }
+	 
+	 public void payPrice() throws Exception {
+	    	driver.findElement(By.xpath(payButton)).click();
+	    }
+	 
+	 public void authorizePayment() throws Exception {
+	    	driver.findElement(By.xpath(payButton)).click();
+	    }
+	 
+	 public void submitAuthorization() throws Exception {
+	    	driver.findElement(By.xpath(submitAuth)).click();
+	    }
+	 
+	 
 
 
 }
